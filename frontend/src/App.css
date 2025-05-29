@@ -1,42 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Base styling */
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+
+  
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Card container */
 .card {
-  padding: 2em;
+  
+  background: linear-gradient(135deg, #355c7d, #6c5b7b, #c06c84);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #1c2a4a; /* better contrast */
+  color: #fff;
+  transition: background-color 0.3s, outline 0.3s;
+}
+
+input:focus {
+  outline: 2px solid #64ffda; /* mint highlight */
+  background-color: #1a2338;
+}
+
+/* Buttons */
+button {
+  background-color: #64ffda; /* mint green */
+  color: #0a192f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+button:hover {
+  background-color: #52e0c4;
+  opacity: 0.9;
+}
+
+/* Delete button (specific) */
+button.delete {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+button.delete:hover {
+  background-color: #e85a5a;
+}
+
+/* Messages */
+.error {
+  color: #ff6b6b;
+  margin-top: 5px;
+}
+
+.warning {
+  color: #ffcb6b;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.success {
+  color: #64ffda;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.info {
+  color: #64ffda;
+  margin-top: 5px;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2a4a;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Links and underline text */
+a, .underline, button.text-blue-600 {
+  color: #64ffda;
+  cursor: pointer;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
+
+a:hover, .underline:hover, button.text-blue-600:hover {
+  color: #52e0c4;
 }
